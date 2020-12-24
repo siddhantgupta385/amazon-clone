@@ -51,7 +51,7 @@ foodservice = Checkbutton(text="Want to prebook your meals?", variable = foodser
 foodservice.grid(row=6, column=3)
 
 #Button & packing it and assigning it a command
-Button(text="Submit to Harry Travels", command=getvals).grid(row=7, column=3)
+Button(text="Submit to shatabdi Travels", command=getvals).grid(row=7, column=3)
 
 
 
