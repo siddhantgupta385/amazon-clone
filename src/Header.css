@@ -32,7 +32,7 @@
   .header__searchIcon {
     padding: 5px;
     height: 22px !important;
-    background-color: #cd9042;
+    background-color: #cd9042;  
   }
   
   .header__optionLineOne {
@@ -57,7 +57,7 @@
   
   .header__nav {
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
   }
   
   .header__option {
