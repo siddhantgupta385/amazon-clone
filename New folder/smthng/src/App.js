@@ -7,13 +7,38 @@ import Checkout from "./Checkout";
 import Login from "./Login";
 // import Payment from "./Payment";
 // import Orders from "./Orders";
-// import { auth } from "./firebase";
-// import { useStateValue } from "./StateProvider";
+import { auth } from "./firebase";
+import { useStateValue } from "./StateProvider";
 // import { loadStripe } from "@stripe/stripe-js";
 // import { Elements } from "@stripe/react-stripe-js";
 
  
 function App() {
+
+
+  const [{}, dispatch] = useStateValue();
+
+  useEffect(() => {
+
+    auth.onAuthStateChanged((authUser) => {
+      console.log("THE USER IS >>> ", authUser);
+
+      if (authUser) {
+
+        dispatch({
+          type: "SET_USER",
+          user: authUser,
+        });
+      } else {
+        dispatch({
+          type: "SET_USER",
+          user: null,
+        });
+      }
+    });
+  }, []);
+
+
   return (
     <Router>
       <div className="app">
