@@ -25,7 +25,6 @@ function Login() {
         auth
             .createUserWithEmailAndPassword(email, password)
             .then((auth) => {
-                // it successfully created a new user with email and password
                 if (auth) {
                     history.push('/')
                 }
@@ -48,11 +47,14 @@ function Login() {
                 <form>
                     <h5>E-mail</h5>
                     <input type='text' value={email} onChange={e => setEmail(e.target.value)} />
+                    {/* <input type='text'  /> */}
 
                     <h5>Password</h5>
                     <input type='password' value={password} onChange={e => setPassword(e.target.value)} />
+                    {/* <input type='password'  /> */}
 
                     <button type='submit' onClick={signIn} className='login__signInButton'>Sign In</button>
+                    {/* <button type='submit'  className='login__signInButton'>Sign In</button> */}
                 </form>
 
                 <p>
@@ -61,8 +63,9 @@ function Login() {
                 </p>
 
                 <button onClick={register} className='login__registerButton'>Create your Amazon Account</button>
-            </div>
-        </div>
+                {/* <button  className='login__registerButton'>Create your Amazon Account</button> */}
+              </div>
+         </div> 
     )
 }
 
