@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./Header";
 import Home from "./Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import Checkout from "./Checkout";
+import Checkout from "./Checkout";
 // import Login from "./Login";
 // import Payment from "./Payment";
 // import Orders from "./Orders";
@@ -17,6 +17,7 @@ function App() {
   return (
     <Router>
       <div className="app">
+        <Header />
         <Switch>
           {/* <Route path="/orders">
             <Header />
@@ -26,9 +27,7 @@ function App() {
             <Login />
           </Route> */}
           <Route path="/checkout">
-            <Header />
-            <h1>checkout bitchhh!</h1>
-            {/* <Checkout /> */}
+            <Checkout />
           </Route>
           {/* <Route path="/payment">
             <Header />
@@ -37,7 +36,6 @@ function App() {
             </Elements>
           </Route> */}
           <Route path="/">
-            <Header />
             <Home />
           </Route>
         </Switch>
