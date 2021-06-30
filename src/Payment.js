@@ -36,8 +36,8 @@ function Payment() {
         getClientSecret();
     }, [basket])
 
-    // console.log('THE SECRET IS >>>', clientSecret)
-    // console.log('👱', user)
+    console.log('THE SECRET IS >>>', clientSecret)
+    console.log('👱', user)
 
     const handleSubmit = async (event) => {
         // do all the fancy stripe stuff...
@@ -143,7 +143,7 @@ function Payment() {
                                         value={getBasketTotal(basket)}
                                         displayType={"text"}
                                         thousandSeparator={true}
-                                        prefix={"$"}
+                                        prefix={"₹"}
                                     />
                                     <button disabled={processing || disabled || succeeded}>
                                         <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
